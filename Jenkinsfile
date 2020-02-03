@@ -6,9 +6,9 @@ node{
 		stage('find zip length') {
             
                 def script ='du -k my_zip_file.zip | cut -f1'
-				size = sh(script: script, returnStdout: true)
+				def size = sh(script: script, returnStdout: true)
 				if(size<100){
-					print("File size is: "+size.toString()+", Hence good to upload")
+					print("File size is: "+size+", Hence good to upload")
 				}
             
         }
