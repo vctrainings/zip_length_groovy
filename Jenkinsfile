@@ -8,7 +8,7 @@ node{
                 def script ='du -k my_zip_file.zip | cut -f1'
 				def size = sh(script: script, returnStdout: true)
 				if(size<100){
-					print("File size is: "+Integer.toString(size)+", Hence good to upload")
+					print("File size is less than 100kb, Hence good to upload")
 				}
             
         }
