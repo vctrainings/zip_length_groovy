@@ -1,7 +1,4 @@
-pipeline {
-    agent any
-
-    stages {
+node{
         stage('find zip length') {
             
                 def script ='du -k my_zip_file.zip | cut -f1'
@@ -10,4 +7,3 @@ pipeline {
             
         }
     }
-}
